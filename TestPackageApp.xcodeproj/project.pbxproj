@@ -14,6 +14,7 @@
 		420ACAF22907103400AD05B1 /* TestPackageAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420ACAF12907103400AD05B1 /* TestPackageAppTests.swift */; };
 		420ACAFC2907103400AD05B1 /* TestPackageAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420ACAFB2907103400AD05B1 /* TestPackageAppUITests.swift */; };
 		420ACAFE2907103400AD05B1 /* TestPackageAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420ACAFD2907103400AD05B1 /* TestPackageAppUITestsLaunchTests.swift */; };
+		420ACB0C290711E600AD05B1 /* PackageExample in Frameworks */ = {isa = PBXBuildFile; productRef = 420ACB0B290711E600AD05B1 /* PackageExample */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		420ACAF72907103400AD05B1 /* TestPackageAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestPackageAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		420ACAFB2907103400AD05B1 /* TestPackageAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPackageAppUITests.swift; sourceTree = "<group>"; };
 		420ACAFD2907103400AD05B1 /* TestPackageAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPackageAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		420ACB0D290715AF00AD05B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				420ACB0C290711E600AD05B1 /* PackageExample in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +97,7 @@
 		420ACADF2907103200AD05B1 /* TestPackageApp */ = {
 			isa = PBXGroup;
 			children = (
+				420ACB0D290715AF00AD05B1 /* Info.plist */,
 				420ACAE02907103200AD05B1 /* TestPackageAppApp.swift */,
 				420ACAE22907103200AD05B1 /* ContentView.swift */,
 				420ACAE42907103400AD05B1 /* Assets.xcassets */,
@@ -143,6 +147,9 @@
 			dependencies = (
 			);
 			name = TestPackageApp;
+			packageProductDependencies = (
+				420ACB0B290711E600AD05B1 /* PackageExample */,
+			);
 			productName = TestPackageApp;
 			productReference = 420ACADD2907103200AD05B1 /* TestPackageApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +222,9 @@
 				Base,
 			);
 			mainGroup = 420ACAD42907103200AD05B1;
+			packageReferences = (
+				420ACB0A290711E600AD05B1 /* XCRemoteSwiftPackageReference "tdd-package-example" */,
+			);
 			productRefGroup = 420ACADE2907103200AD05B1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -420,6 +430,7 @@
 				DEVELOPMENT_TEAM = EH2QCJHEZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestPackageApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +460,7 @@
 				DEVELOPMENT_TEAM = EH2QCJHEZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestPackageApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -583,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		420ACB0A290711E600AD05B1 /* XCRemoteSwiftPackageReference "tdd-package-example" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thiagown1/tdd-package-example";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		420ACB0B290711E600AD05B1 /* PackageExample */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 420ACB0A290711E600AD05B1 /* XCRemoteSwiftPackageReference "tdd-package-example" */;
+			productName = PackageExample;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 420ACAD52907103200AD05B1 /* Project object */;
 }

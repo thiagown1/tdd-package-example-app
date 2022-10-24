@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import PackageExample
 
 @main
 struct TestPackageAppApp: App {
+    
+    init() {
+        PackageExample().configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

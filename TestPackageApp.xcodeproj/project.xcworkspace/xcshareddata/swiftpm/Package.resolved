@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "tdd-package-example",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/thiagown1/tdd-package-example",
+      "state" : {
+        "branch" : "master",
+        "revision" : "bcc57994f1015fa791d315622fc555ad676805a0"
+      }
+    }
+  ],
+  "version" : 2
+}
